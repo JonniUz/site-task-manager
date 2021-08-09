@@ -1,0 +1,18 @@
+{% extends 'main/base.html' %}
+{% block title %}
+Home
+{% endblock title %}
+{% block content %}
+
+<h1>Home</h1>
+{% if tasks %}
+{% for task in tasks %}
+<div class="alert alert-warning mt-2">
+    <h1>{{ task.title }}</h1>
+    <p>{{ task.task }}</p>
+</div>
+{% endfor %}
+{% else %}
+<p>Sizda yozuv yo'q!</p>
+{% endif %}
+{% endblock content %}
